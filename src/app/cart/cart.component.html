@@ -1,0 +1,30 @@
+<br>
+<h3 align="center">My Orders</h3>
+<div class="container">
+<table class="table">
+    <thead>
+        <th>  {{cartItems.length}} Item  Name</th>
+        <!-- <th>Quantity</th> -->
+        <th> Price</th>
+        <th colspan="1">Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of cartItems">
+            <td>{{product.name}}</td>
+            <!-- <td>{{product.description}}</td> -->
+            <td>{{product.price}}</td>
+            <td><button class="glyphicon glyphicon-trash" (click)="deleteproduct( product)"></button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><h3 align="right">Sub Total: </h3></td>
+            <td><h3>{{total}}</h3></td>
+            
+        </tr>
+    </tbody>
+   </table>
+</div>
+<div class="container"> 
+    <button class="btn btn-primary" align="right" (click)="pay()"> Pay</button>
+
+</div>
+

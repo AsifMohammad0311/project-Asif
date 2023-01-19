@@ -1,0 +1,141 @@
+<div class="shell">
+    <h1 align="center">Tiffins</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of tiffins">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%;padding: 10px;">
+                    <div class="card-body">
+                        <h4 class="card-title" align="center">{{product.name}}</h4>
+                        <!-- <p class="card-text">{{product.quantity}}</p> -->
+                        <h3>₹{{product.price}}/-</h3>
+                        <p align="right">
+                            <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1 align="center">Biryani</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of biryani">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%;padding: 10px">
+                    <div class="card-body">
+                        <h4 class="card-title" align="center">{{product.name}}</h4>
+                        <!-- <p class="card-text">{{product.description}}</p> -->
+                        <h3>₹{{product.price}}/-</h3>
+                        <p align="right">
+                            <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1 align="center">Pure Veg</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of pureVeg">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%;padding: 10px">
+                    <div class="card-body">
+                        <h4 class="card-title" align="center">{{product.name}}</h4>
+                        <!-- <p class="card-text">{{product.description}}</p> -->
+                        <h3>₹{{product.price}}/-</h3>
+                        <p align="right">
+                            <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1 align="center">Pizza</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of pizza">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%;padding: 10px">
+                    <div class="card-body">
+                        <h4 class="card-title" align="center">{{product.name}}</h4>
+                        <!-- <p class="card-text">{{product.description}}</p> -->
+                        <h3>₹{{product.price}}/-</h3>
+                        <p align="right">
+                            <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1 align="center">Chinese</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of chinese">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%;padding: 10px">
+                    <div class="card-body">
+                        <h4 class="card-title" align="center">{{product.name}}</h4>
+                        <!-- <p class="card-text">{{product.description}}</p> -->
+                        <h3>₹{{product.price}}/-</h3>
+                        <p align="right">
+                            <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1 align="center">IceCreams</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of icecreams">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%;padding: 10px">
+                    <div class="card-body">
+                        <h4 class="card-title" align="center">{{product.name}}</h4>
+                        <!-- <p class="card-text">{{product.description}}</p> -->
+                        <h3>₹{{product.price}}/-</h3>
+                        <p align="right">
+                            <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1 align="center">Sweets</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of sweets">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%;padding: 10px">
+                    <div class="card-body">
+                        <h4 class="card-title" align="center">{{product.name}}</h4>
+                        <!-- <p class="card-text">{{product.description}}</p> -->
+                        <h3>₹{{product.price}}/-</h3>
+                        <p align="right">
+                            <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

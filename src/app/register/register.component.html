@@ -1,0 +1,109 @@
+<div class="container">
+    <form  [formGroup]="registerForm" name="myForm" #regForm="ngForm" (ngSubmit)="register(regForm.value)">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Id</label>
+                    <input class="form-control" type="text" name="id" placeholder="Enter Id"    formControlName="id"/><br>
+                    <label> First Name</label>
+                    <input class="form-control" type="text" name="firstName"    formControlName="firstName"/>
+                 </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Last Name</label>
+                    <input class="form-control" type="text" name="lastName"    formControlName="lastName"/>
+                 </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label>City</label>
+                    <!-- <select class="form-control" name="gender"    formControlName="gender">
+                        <option value="" selected> Select Gender </option>
+                        <option value="Male"> Male </option>
+                        <option value="Female"> Female </option>
+                    </select> -->
+                    <select class="form-control" name="city"    formControlName="city">
+                        <option value="" selected> Select City </option>
+                        <option value="Hyderabad"> Hyderabad</option>
+                        <option value="Bangalore"> Bangalore </option>
+                        <option value="Chennai"> Chennai </option>
+                        <option value="Pune"> Pune </option>
+                        <option value="Mumbai"> Mumbai </option>
+                        <option value="Delhi"> Delhi </option>
+                        <option value="Lucknow"> Lucknow </option>
+                        <option value="Kerala"> Kerala</option>
+                        <option value="Kolkata"> Kolkata</option>
+                        <option value="Jaipur"> Jaipur</option>
+                        <option value="Noida"> Noida </option>
+
+
+                   </select>
+                 </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Mobile Number</label>
+                    <input class="form-control" type="text" name="mobileNo"   formControlName="mobileNo" />
+                 </div>
+            </div>
+            <div>
+                <br>
+                <label>Country</label>
+                    <select name="country" formControlName="country">
+                        <option value="" selected> Select Country </option>
+                        <option value="{{country.cca3}}" *ngFor="let country of countries"> {{country.name.common}} </option>
+                    </select>
+               </div>
+               <div>
+               <br/>
+              </div>
+            <div >
+              
+                <br>
+                <label>Street</label>
+                <input class="form-control" type="text" name="street"   formControlName="street" /><br>
+             </div>
+             <div >
+                
+              <br>
+              <label>Pincode</label>
+              <input class="form-control" type="text" name="pincode"   formControlName="pincode" /><br>
+           </div>
+              
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label>EmailId</label>
+                    <input class="form-control" type="text" name="emailId"   formControlName="emailId"/>
+                    <span *ngIf="f['emailId'].getError('required')!=null">Enter Email</span>
+                    <span *ngIf="f['emailId'].getError('email')!=null">Enter Email corectly</span>
+                 </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label>Password</label>
+                    <input class="form-control" type="password" name="password"   formControlName="password"/>
+                    <span *ngIf="f['password'].getError('required')!=null">Enter Password</span>
+                 </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input class="form-control" type="password" name="conpassword"   formControlName="conpassword"/>
+                    <span *ngIf="f['conpassword'].getError('required')!=null">Enter Confirm Password</span>
+                    <span *ngIf="f['conpassword'].getError('mustMatch')!=null">Password mismatch</span>
+                 </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label></label><br>
+                    <button class="btn btn-primary" [disabled]="registerForm.invalid"> register </button>
+                 </div>
+            </div>
+        </div>
+    </form>
+
+</div>
