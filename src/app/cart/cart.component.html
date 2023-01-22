@@ -4,7 +4,7 @@
 <table class="table">
     <thead>
         <th>  {{cartItems.length}} Item  Name</th>
-        <!-- <th>Quantity</th> -->
+        <th>Quantity</th>
         <th> Price</th>
         <th colspan="1">Action</th>
     </thead>
@@ -12,6 +12,10 @@
         <tr *ngFor="let product of cartItems">
             <td>{{product.name}}</td>
             <!-- <td>{{product.description}}</td> -->
+           <td><div class="form-outline">
+                <input id="form1" min="0" (change)="count($event)" name="quantity" value="1" type="number" class="form-control" />
+                <!-- <label class="form-label" for="form1">Quantity</label> -->
+              </div></td>
             <td>{{product.price}}</td>
             <td><button class="glyphicon glyphicon-trash" (click)="deleteproduct( product)"></button></td>
         </tr>
