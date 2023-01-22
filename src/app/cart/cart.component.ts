@@ -20,6 +20,7 @@ export class CartComponent implements OnInit {
   cnti:any;
   cntd:any;
   txt:any;
+  quantity:any;
   Razorpay: any;
  
 
@@ -123,7 +124,13 @@ export class CartComponent implements OnInit {
     this.rzp1 = new this.service.nativeWindow.Razorpay(this.options);
     this.rzp1.open();
   }
+count(event:any){
 
+  let quantity=event.target.value;
+  console.log(quantity);
+  this.quantity=quantity;
+
+}
 
 
 
